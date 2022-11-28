@@ -1,4 +1,4 @@
-import { carService } from '../services/car.service.local'
+import { carService } from '../../services/car.service.local'
 
 export function getActionRemoveCar(carId) {
     return {
@@ -32,7 +32,7 @@ export const carStore = {
         cars: []
     },
     getters: {
-        cars({cars}) { return cars },
+        cars({ cars }) { return cars },
     },
     mutations: {
         setCars(state, { cars }) {
@@ -48,7 +48,7 @@ export const carStore = {
         removeCar(state, { carId }) {
             state.cars = state.cars.filter(car => car._id !== carId)
         },
-        addCarMsg(state, { carId , msg}) {
+        addCarMsg(state, { carId, msg }) {
             const car = state.cars.find(car => car._id === carId)
             if (!car.msgs) car.msgs = []
             car.msgs.push(msg)
@@ -96,7 +96,7 @@ export const carStore = {
         async addCarMsg(context, { carId, txt }) {
             try {
                 const msg = await carService.addCarMsg(carId, txt)
-                context.commit({type: 'addCarMsg', carId, msg })
+                context.commit({ type: 'addCarMsg', carId, msg })
             } catch (err) {
                 console.log('carStore: Error in addCarMsg', err)
                 throw err
