@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 
 import { userStore } from './modules/user.store.js'
-import { carStore } from './modules/car.store.js'
+import { carStore } from './modules/board-store.js'
 import { reviewStore } from './modules/review.store.js'
 
 export const store = Vuex.createStore({
