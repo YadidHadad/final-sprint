@@ -10,3 +10,16 @@ $clr6: #fff;
 $mobile-breakpoint: 460px;
 $narrow-breakpoint: 720px;
 $normal-breakpoint: 960px;
+$wide-breakpoint: 1200px;
+$large-breakpoint: 1360px;
+$super-breakpoint: 1920px;
+
+// LAYOUT
+$layoutPadding: 20px;
+
+$padded-mobile-breakpoint: $mobile-breakpoint + $layoutPadding * 2;
+$padded-narrow-breakpoint: $narrow-breakpoint + $layoutPadding * 2;
+$padded-normal-breakpoint: $normal-breakpoint + $layoutPadding * 2;
+$padded-wide-breakpoint: $wide-breakpoint + $layoutPadding * 2;
+$padded-large-breakpoint: $large-breakpoint + $layoutPadding * 2;
+$padded-super-breakpoint: $super-breakpoint + $layoutPadding * 2;
